@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Options</title>
+    <meta name="manifest.open_in_tab" content="false" />
+    <meta name="manifest.browser_style" content="true" />
+  <script type="module" crossorigin src="/chunks/options-C6QnrA-V.js"></script>
+  <link rel="modulepreload" crossorigin href="/chunks/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/chunks/bookmarksync-BBedGguP.js">
+  <link rel="modulepreload" crossorigin href="/chunks/options-storage-CfhD3UO8.js">
+  <link rel="stylesheet" crossorigin href="/assets/options-a0My9enD.css">
+</head>
+
+<body>
+    <form id="options-form" class="detail-view-container">
+		<details role="term" open>
+			<summary><strong>🔄 Bookmarks source</strong></summary>
+		</details>
+		<div role="definition" class="content">
+			<div>
+				<div id="source1">
+					<p>
+						<label>
+							<input type="checkbox" name="source1_useCustomHost">
+							Use GitHub Enterprise Server
+						</label>
+					</p>
+					<p class="custom-host-container">
+						<label class="text-input">
+							<span>GitHub API URL</span>
+							<input type="url" name="source1_githubApiUrl" required placeholder="https://github.yourdomain.com/api/v3">
+						</label>
+					</p>
+					<p>
+						<label class="text-input">
+							<span>GitHub Personal Access Token</span>
+							<input type="password" name="source1_pat" required>
+						</label>
+					</p>
+					<p class="repo-source">
+						<label class="text-input">
+							<span>Repository</span>
+							<input type="text" name="source1_owner" required placeholder="Owner">
+							<span class="divider">/</span>
+							<input type="text" name="source1_repo" required placeholder="Repository">
+						</label>
+					</p>
+					<p>
+						<label class="text-input">
+							<span>Path</span>
+							<input type="text" name="source1_sourcePath" required placeholder="File or folder">
+						</label>
+					</p>
+				</div>
+				<div>
+					<hr/>
+					<p>
+						<label>
+							<input type="checkbox" name="source2_active">
+							Activate additional bookmark source
+						</label>
+					</p>
+				</div>
+				<div id="source2">
+					<p>
+						<label>
+							<input type="checkbox" name="source2_useCustomHost">
+							Use GitHub Enterprise Server
+						</label>
+					</p>
+					<p class="custom-host-container">
+						<label class="text-input">
+							<span>GitHub API URL</span>
+							<input type="url" name="source2_githubApiUrl" required placeholder="https://github.yourdomain.com/api/v3">
+						</label>
+					</p>
+					<p>
+						<label class="text-input">
+							<span>GitHub Personal Access Token</span>
+							<input type="password" name="source2_pat" required>
+						</label>
+					</p>
+					<p class="repo-source">
+						<label class="text-input">
+							<span>Repository</span>
+							<input type="text" name="source2_owner" required placeholder="Owner">
+							<span class="divider">/</span>
+							<input type="text" name="source2_repo" required placeholder="Repository">
+						</label>
+					</p>
+					<p>
+						<label class="text-input">
+							<span>Path</span>
+							<input type="text" name="source2_sourcePath" required placeholder="File or folder">
+						</label>
+					</p>
+				</div>
+				<div>
+					<hr/>
+					<button class="check-connection-btn">Check Connection(s)</button>
+					<div>
+						<p class="connection-message"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<details id="export">
+			<summary><strong>🗄️ Export options</strong></summary>
+		</details>
+		<div role="definition" class="content">
+			<div>
+				<p>
+					You can export and import options across browsers and devices via a JSON file.
+				</p>
+				<p>
+					<strong>Note</strong> that your options include your access token!
+				</p>
+				<p>
+					<button type="button" class="js-export">Export</button>
+					<button type="button" class="js-import">Import</button>
+				</p>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>
